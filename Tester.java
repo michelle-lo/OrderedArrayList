@@ -48,8 +48,6 @@ public class Tester {
     print(intList.set(2, -5), 1);
     System.out.println(intList);
 
-
-
     System.out.println("strList");
     NoNullArrayList<String> strList = new OrderedArrayList<String>();
     head("add");
@@ -74,16 +72,7 @@ public class Tester {
     } catch (IllegalArgumentException e) {
       System.out.println("error! -- nulls are not accepted");
     }
-
-
-    //ba.add(3);
-    //print(ba.add(2), true);
-    //print("" + ba, "[1, 2, 3]");
-
-
-
-    System.out.println("all good!");
-
+    System.out.println(strList);
   }
 
 

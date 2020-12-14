@@ -14,17 +14,17 @@ public class Tester {
     try {
       ah.add(2, null);
     } catch (IllegalArgumentException e) {
-      System.out.println("error! -- nulls cannot be accepted");
+      System.out.println("error! -- nulls are not accepted");
     }
     try {
       ah.add(null);
     } catch (IllegalArgumentException e) {
-      System.out.println("error! -- nulls cannot be accepted");
+      System.out.println("error! -- nulls are not accepted");
     }
     try {
       ah.set(2, null);
     } catch (IllegalArgumentException e) {
-      System.out.println("error! -- nulls cannot be accepted");
+      System.out.println("error! -- nulls are not accepted");
     }
     print("" + ah, "[no, yes]");
 
@@ -64,11 +64,16 @@ public class Tester {
     try {
       strList.add(null);
     } catch (IllegalArgumentException e) {
-      System.out.println("error! -- nulls cannot be accepted");
+      System.out.println("error! -- nulls are not accepted");
     }
     head("set");
     print(strList.set(1, "BIRD"), "aa");
     System.out.println(strList);
+    try {
+      strList.set(1, null);
+    } catch (IllegalArgumentException e) {
+      System.out.println("error! -- nulls are not accepted");
+    }
 
 
     //ba.add(3);

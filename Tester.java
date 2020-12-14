@@ -35,13 +35,34 @@ public class Tester {
     //first addition
     print(intList.add(1), true);
     print("" + intList, "[1]");
+    //other cases
+    print(intList.add(2), true);
+    System.out.println(intList);
+    print(intList.add(3), true);
+    System.out.println(intList);
+    print(intList.add(1), true);
+    System.out.println(intList);
+    print(intList.add(0), true);
+    System.out.println(intList);
+
 
     System.out.println("strList");
     NoNullArrayList<String> strList = new OrderedArrayList<String>();
     head("add");
     //first addition
+    print(strList.add("aa"), true);
+    print("" + strList, "[aa]");
+    //other cases
     print(strList.add("a"), true);
-    print("" + strList, "[a]");
+    print("" + strList, "[a, aa]");
+    print(strList.add("bird"), true);
+    print("" + strList, "[a, aa, bird]");
+    try {
+      strList.add(null);
+    } catch (IllegalArgumentException e) {
+      System.out.println("error! -- null added");
+    }
+
 
     //ba.add(3);
     //print(ba.add(2), true);

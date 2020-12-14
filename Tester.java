@@ -28,7 +28,25 @@ public class Tester {
     }
     print("" + ah, "[no, yes]");
 
-    
+    System.out.println("\nOrderedArrayList\n");
+    System.out.println("intList");
+    NoNullArrayList<Integer> intList = new OrderedArrayList<Integer>();
+    head("add");
+    //first addition
+    print(intList.add(1), true);
+    print("" + intList, "[1]");
+
+    System.out.println("strList");
+    NoNullArrayList<String> strList = new OrderedArrayList<String>();
+    head("add");
+    //first addition
+    print(strList.add("a"), true);
+    print("" + strList, "[a]");
+
+    //ba.add(3);
+    //print(ba.add(2), true);
+    //print("" + ba, "[1, 2, 3]");
+
 
 
     System.out.println("all good!");

@@ -6,19 +6,25 @@ public class NoNullArrayList<T> extends ArrayList<T> {
   }
 
   public NoNullArrayList (int startingCapacity) {
+
     super(startingCapacity);
   }
 
   public boolean add(T element) {
-
+    if (element == null) {
+      //throw new IllegalArgumentException("You cannot add a null");
+      return false;
+    }
+    super.add(element);
     return true;
   }
 
   public void add(int index, T element) {
-
+    super.add(index, element);
   }
 
   public T set (int index, T element) {
+    super.set(index, element);
     return element;
   }
 

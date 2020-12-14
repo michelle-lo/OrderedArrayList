@@ -7,7 +7,7 @@ public class Tester {
     print(ah.add("hello"), true);
     ah.add(0, "no");
     print("" + ah, "[no, hello]");
-    print(ah.set(1, "yes"), "yes");
+    print(ah.set(1, "yes"), "hello");
     print("" + ah, "[no, yes]");
 
     head("add, add(index, e), set -- with nulls");

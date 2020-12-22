@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Tester {
   public static void main (String[] args) {
@@ -73,6 +74,37 @@ public class Tester {
       System.out.println("error! -- nulls are not accepted");
     }
     System.out.println(strList);
+
+
+    NoNullArrayList<Integer> retry = new OrderedArrayList<Integer>();
+    Random rnd = new Random(100);
+    for (int i = 0; i < 10; i++) {
+      int x = rnd.nextInt() / 10000000;
+      retry.add(x);
+    }
+    System.out.println("actual: " + retry);
+    System.out.println("expected: [-163, -142, -127, -122, -119, -113, -95, 11, 83, 130]");
+
+    NoNullArrayList<Integer> retry1 = new OrderedArrayList<Integer>();
+    int[] ppp = {6, 10, 21, 7, 26, 19, 29, 32, 1, 32, 33, 35, 44, 1, 47, 45, 49, 44, 51, 52, 50, 52, 58, 51, 64, 62, 75, 23, 77, 52, 78, 9, 79, 85, 83, 89, 52, 92, 79, 96};
+    for (int i = 0; i < ppp.length; i++) {
+      retry1.add(ppp[i]);
+    }
+    System.out.println("actual: " + retry1);
+    Arrays.sort(ppp);
+    System.out.println("expected: " + Arrays.toString(ppp));
+    print("" + retry1, Arrays.toString(ppp));
+
+    NoNullArrayList<Integer> retry2 = new OrderedArrayList<Integer>();
+    int[] qqq = {14, 19, 20, 3, 20, 11, 22, 20, 22, 23, 16, 36, 24, 38, 31, 44, 5, 45, 17, 45, 21, 50, 46, 52, 53, 4, 57, 71, 68, 78, 76, 84, 48, 85, 76, 90, 77, 91, 97, 99};
+    for (int i = 0; i < qqq.length; i++) {
+      retry2.add(qqq[i]);
+    }
+    retry2.add(100);
+    int[] zzz = {14, 19, 20, 3, 20, 11, 22, 20, 22, 23, 16, 36, 24, 38, 31, 44, 5, 45, 17, 45, 21, 50, 46, 52, 53, 4, 57, 71, 68, 78, 76, 84, 48, 85, 76, 90, 77, 91, 97, 99, 100};
+    Arrays.sort(zzz);
+    print("" + retry2, Arrays.toString(zzz));
+
   }
 
 

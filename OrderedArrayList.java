@@ -26,14 +26,6 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
 
     for (int i = 0; i < super.size() - 1; i++) {
-      /*
-      System.out.println("i: " + i);
-      System.out.println("super.get(i): " + super.get(i));
-      System.out.println("(element.compareTo(super.get(i)) >= 0): " + (element.compareTo(super.get(i)) >= 0));
-      System.out.println("i+1: " + (i + 1));
-      System.out.println("super.get(i+1): " + super.get(i + 1));
-      System.out.println("(element.compareTo(super.get(i + 1)) <= 0" + (element.compareTo(super.get(i + 1)) <= 0));
-      */
       if ((element.compareTo(super.get(i)) >= 0) && (element.compareTo(super.get(i + 1)) <= 0)) {
         super.add(i + 1, element);
 
